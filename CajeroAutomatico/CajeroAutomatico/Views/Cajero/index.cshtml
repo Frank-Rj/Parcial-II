@@ -1,0 +1,25 @@
+﻿@model CajeroAutomatico.Models.Cajero
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>index</title>
+</head>
+<body>
+    <div>
+        @using (Html.BeginForm("index", "Cajero", FormMethod.Post))
+         {
+            <label>Ingrese el monto</label>
+            @Html.TextBoxFor(a => a.Monto)
+            <br>
+            <input type="submit" value="Retirar">
+         }
+    </div>
+</body>
+</html>
